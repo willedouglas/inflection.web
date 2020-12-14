@@ -1,0 +1,63 @@
+{
+  "html": {
+    "options": {
+      "title": "Inflection",
+      "template": "template.index.html"
+    }
+  },
+  "components": {
+    "source": {
+      "entry": "config/components"
+    }
+  },
+  "scripts": {
+    "source": {
+      "inflection": {
+        "entry": "index.js"
+      }
+    },
+    "dist": {
+      "root": "dist",
+      "filename": {
+        "prod": "[name].min.js",
+        "dev": "[name].js"
+      }
+    }
+  },
+  "styles": {
+    "source": {
+      "entry": "src/assets/sass/main.scss"
+    },
+    "dist": {
+      "filename": {
+        "prod": "inflection.min.css",
+        "dev": "inflection.css"
+      }
+    }
+  },
+  "images": {
+    "source": {
+      "root": "src/assets/images/",
+      "context": "src"
+    },
+    "dist": {
+      "filename": "[path][name].[ext]"
+    }
+  },
+  "assets": {
+    "source": {
+      "files": "src/assets/"
+    },
+    "dist": {
+      "root": "assets/[path][name].[ext]"
+    }
+  },
+  "fonts": {
+    "source": {
+      "context": "src"
+    },
+    "dist": {
+      "filename": "[path][name].[ext]"
+    }
+  }
+}
