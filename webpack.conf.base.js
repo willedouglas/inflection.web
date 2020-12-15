@@ -60,6 +60,7 @@ module.exports = {
     extensions: ['*', '.js', '.jsx'],
     alias: {
       '@components': path.resolve(__dirname, project.components.source.entry),
+      '@resources': path.resolve(__dirname, project.resources.source.entry),
       '@utils': path.resolve(__dirname, project.utils.source.entry),
       '@assets': path.resolve(__dirname, project.assets.source.files),
     },

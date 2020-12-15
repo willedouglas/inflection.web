@@ -2,15 +2,35 @@ import React from 'react';
 
 import { Typography } from '@components';
 
-const RegisterConfirmation = () => (
+import RegisterPersonalInfo from './RegisterPersonalInfo';
+import RegisterProfessionalInfo from './RegisterProfessionalInfo';
+
+const RegisterConfirmation = ({
+  onBlur,
+  values,
+  errors,
+}) => (
   <React.Fragment>
-    <Typography variant="h5" gutterBottom>
-      Thank you for your order.
+    <Typography variant="h6" gutterBottom>
+      Confirme suas informações
     </Typography>
     <Typography variant="subtitle1">
-      Your order number is #2001539. We have emailed your order confirmation, and will
-      send you an update when your order has shipped.
+      Garante que tudo que você nos informou está correto e boa sorte.
     </Typography>
+    <br />
+    <RegisterPersonalInfo
+      onBlur={onBlur}
+      values={values}
+      errors={errors}
+      readOnly
+    />
+    <br />
+    <RegisterProfessionalInfo
+      onBlur={onBlur}
+      values={values}
+      errors={errors}
+      readOnly
+    />
   </React.Fragment>
 );
 

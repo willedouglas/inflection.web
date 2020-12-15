@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const RegisterConfirmation = ({
+  isValid,
   isNotFirstStep,
   isLastStep,
   handleBack,
@@ -37,6 +38,7 @@ const RegisterConfirmation = ({
         color="primary"
         onClick={handleNext}
         className={classes.button}
+        disabled={!isValid}
       >
         {isLastStep ? 'Enviar' : 'Próximo'}
       </Button>

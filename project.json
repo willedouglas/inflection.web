@@ -10,6 +10,11 @@
       "entry": "src/components/index"
     }
   },
+  "resources": {
+    "source": {
+      "entry": "src/resources"
+    }
+  },
   "utils": {
     "source": {
       "entry": "src/utils/index"
