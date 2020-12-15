@@ -7,7 +7,12 @@
   },
   "components": {
     "source": {
-      "entry": "config/components"
+      "entry": "src/components/index"
+    }
+  },
+  "utils": {
+    "source": {
+      "entry": "src/utils/index"
     }
   },
   "scripts": {

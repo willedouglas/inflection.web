@@ -3,19 +3,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const project = require('./project.json');
 
 module.exports = {
   entry: {
     inflection: path.resolve(__dirname, project.scripts.source.inflection.entry),
-  },
-  output: {
-    library: '[name]',
-    libraryExport: 'default',
-    libraryTarget: 'umd',
-    path: path.resolve(__dirname, project.scripts.dist.root),
-    umdNamedDefine: true,
   },
   module: {
     rules: [
@@ -66,13 +60,13 @@ module.exports = {
     extensions: ['*', '.js', '.jsx'],
     alias: {
       '@components': path.resolve(__dirname, project.components.source.entry),
+      '@utils': path.resolve(__dirname, project.utils.source.entry),
+      '@assets': path.resolve(__dirname, project.assets.source.files),
     },
   },
   plugins: [
+    new Dotenv(),
     new HtmlWebpackPlugin(project.html.options),
-    new MiniCssExtractPlugin({
-      filename: project.styles.dist.filename.dev,
-    }),
     new CopyWebpackPlugin({
       patterns: [{
         from: project.assets.source.files,

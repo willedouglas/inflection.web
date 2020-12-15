@@ -3,11 +3,18 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './src/App';
+import { renderRoutes } from 'react-router-config';
+import { BrowserRouter } from 'react-router-dom';
+
+import './src/assets/sass/main.scss';
+
+import routes from './src/router/routes';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      {renderRoutes(routes)}
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root'),
 );

@@ -1,14 +1,16 @@
 const webpack = require('webpack');
-const camelToKebabCase = require('camel-to-kebab');
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+
 const project = require('./project.json');
 
 module.exports = {
   mode: 'production',
-  devtool: '#source-map',
+  devtool: 'source-map',
   output: {
-    filename: ({ chunk }) => project.scripts.dist.filename.prod.replace('[name]', camelToKebabCase(chunk.name)),
+    path: path.resolve(__dirname, project.scripts.dist.root),
+    filename: project.scripts.dist.filename.prod,
   },
   optimization: {
     minimizer: [
