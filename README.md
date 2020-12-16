@@ -1,13 +1,13 @@
 # inflection.web
 inflection is a web responsive application destined to apply a job subscription. 
 
-![image](https://i.imgur.com/RsbYAAE.png)
+![image](https://i.imgur.com/RsbYAAE.png =215x)
 
 ## online demo
 http://inflection-web.herokuapp.com/
 
 ## additional points
-* to integrate with linkedin, a [backend was created to process requests and capture basic profile information](https://github.com/willedouglas/inflection.api) deployed [here](http://inflection-api.herokuapp.com/).
+* to integrate with Linkedin, a [backend was created to process requests and capture basic profile information](https://github.com/willedouglas/inflection.api) deployed [here](http://inflection-api.herokuapp.com/).
 
 ## how to run in development mode
 
