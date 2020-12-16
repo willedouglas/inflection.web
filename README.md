@@ -1,7 +1,8 @@
 # inflection.web
 inflection is a web responsive application destined to apply a job subscription. 
 
-![image](https://i.imgur.com/RsbYAAE.png =215x)
+![image](https://i.imgur.com/7hqCscN.png)
+
 
 ## online demo
 http://inflection-web.herokuapp.com/
