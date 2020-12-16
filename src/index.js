@@ -6,9 +6,9 @@ import ReactDOM from 'react-dom';
 import { renderRoutes } from 'react-router-config';
 import { BrowserRouter } from 'react-router-dom';
 
-import './src/assets/sass/main.scss';
+import './assets/sass/main.scss';
 
-import routes from './src/router/routes';
+import routes from './router/routes';
 
 ReactDOM.render(
   <React.StrictMode>
