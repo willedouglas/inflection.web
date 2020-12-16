@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react';
-import Avatar from '../Avatar';
+import Container from '../Container';
 
 test('should render child text inside component', () => {
   const { getByText } = render(
-    <Avatar path="path/passed/props">
-      <h1>Im a Child!</h1>
-    </Avatar>
+    <Container path="path/passed/props">
+      Im a Child!
+    </Container>
   );
 
   expect(getByText(/Im a Child!/i)).toBeInTheDocument();

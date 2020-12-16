@@ -3,7 +3,6 @@ import Box from './Layout/Box/Box';
 import Container from './Layout/Container/Container';
 import Grid from './Layout/Grid/Grid';
 import GridList from './Layout/GridList/GridList';
-import Hidden from './Layout/Hidden/Hidden';
 
 /* Surface */
 import AppBar from './Surface/AppBar/AppBar';
@@ -42,7 +41,6 @@ export {
   Container,
   Grid,
   GridList,
-  Hidden,
   AppBar,
   Paper,
   Toolbar,
