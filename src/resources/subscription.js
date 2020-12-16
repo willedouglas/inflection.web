@@ -1,19 +1,17 @@
-/* eslint-disable no-console */
-
 import { api } from '@utils';
 
 const apiHelper = api({
-  baseURL: `${process.env.INFLECTION_API_URI}`,
+  baseURL: `${process.env.REACT_APP_INFLECTION_API_URI}`,
 });
 
-export default {
-  authorize(code) {
-    return apiHelper.post('/linkedin/authorize', { code });
-  },
-  profile(accessToken) {
-    return apiHelper.post('/linkedin/profile', { access_token: accessToken });
-  },
-  submitSubscription(subscription) {
-    console.log('submitted! still not implemented.', subscription);
-  },
+const authorize = (code) => apiHelper.post('/linkedin/authorize', { code });
+
+const profile = (accessToken) => apiHelper.post('/linkedin/profile', { access_token: accessToken });
+
+const submit = (subscription) => console.log('submitted! still not implemented.', subscription);
+
+export {
+  authorize,
+  profile,
+  submit,
 };

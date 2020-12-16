@@ -1,4 +1,4 @@
-import subscriptionResource from '@resources/subscription';
+import { submit } from '@resources/subscription';
 
 const validateFirstStep = (values) => (
   !!values.firstName
@@ -42,7 +42,7 @@ const validateEmptyFields = (values, key, value) => {
   return validatedValues;
 };
 
-const submitSubscription = (subscription) => subscriptionResource.submitSubscription(subscription);
+const submitSubscription = (subscription) => submit(subscription);
 
 export {
   isValidStep,

@@ -35,7 +35,7 @@ const LinkedinCallBack = ({ location }) => {
     redirectRegister(profileData);
   };
 
-  useEffect(async () => {
+  useEffect(() => {
     handleInit();
   });
 
